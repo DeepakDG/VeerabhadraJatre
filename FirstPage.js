@@ -195,9 +195,9 @@ export default class FirstPage extends Component<{}> {
       <View style={styles.SplashScreen_RootView}>
         <View style={styles.SplashScreen_ChildView}>
           <ImageBackground
-            source={require('./games/splash_new.jpg')}
+            source={require('./games/swamy_splash.jpg')}
             style={styles.image}>
-            <Text style={styles.topHeadingInvite}>ಶ್ರೀ ವೀರಭದ್ರ ಸ್ವಾಮಿ ಜಾತ್ರೆ 2021 - ಬೆಟಗೇರಿ</Text>
+            <Text style={styles.topHeadingInvite}>ಶ್ರೀ ವೀರಭದ್ರ ಸ್ವಾಮಿ ಜಾತ್ರೆ{"\n"}ಬೆಟಗೇರಿ</Text>
           </ImageBackground>
           <View
             style={{
@@ -205,7 +205,7 @@ export default class FirstPage extends Component<{}> {
               flex: 1,
               flexDirection: 'row',
               position: 'absolute',
-               alignItems: 'flex-start',
+              alignItems: 'flex-start',
             }}>
             <View
               style={{
@@ -296,9 +296,9 @@ const styles = StyleSheet.create({
   },
 
   SplashScreen_RootView: {
-    justifyContent: 'center',
-    flex: 1,
     position: 'absolute',
+    top: 0,
+    left: 0,
     width: '100%',
     height: '100%',
   },
@@ -308,6 +308,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#bb1471',
     flex: 1,
+    padding: 5,
   },
   image: {
     width: '100%',
@@ -319,7 +320,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
   },
-  
+
   animatedView: {
     width,
     backgroundColor: '#0a5386',
@@ -342,13 +343,13 @@ const styles = StyleSheet.create({
     paddingVertical: 3,
   },
   topHeadingInvite: {
-    fontSize: 18,
+    fontSize: 25,
     fontWeight: 'bold',
-    fontStyle: 'italic',
     textAlign: 'center',
     color: '#FF4500',
-    bottom: 10,
+    bottom:1,
     position: 'absolute',
+    backgroundColor: '#bb1471',
     left: 0,
     right: 0,
     justifyContent: 'center',
