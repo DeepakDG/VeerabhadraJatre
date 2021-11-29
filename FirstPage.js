@@ -226,10 +226,9 @@ export default class FirstPage extends Component<{}> {
             style={{ width: "100%", height: "100%", resizeMode: "contain" }}
           /> */}
           <ImageBackground
-            source={require('./games/veerabhadra_swamy_splash.jpg')}
-            resizeMode="cover"
+            source={require('./games/splash_new.jpg')}
             style={styles.image}>
-            <Text style={styles.topHeadingInvite}>Inside</Text>
+            <Text style={styles.topHeadingInvite}>ಶ್ರೀ ವೀರಭದ್ರ ಸ್ವಾಮಿ ಜಾತ್ರೆ 2021 - ಬೆಟಗೇರಿ</Text>
           </ImageBackground>
           <View
             style={{
@@ -237,7 +236,7 @@ export default class FirstPage extends Component<{}> {
               flex: 1,
               flexDirection: 'row',
               position: 'absolute',
-              bottom: 10,
+               alignItems: 'flex-start',
             }}>
             <View
               style={{
@@ -249,7 +248,7 @@ export default class FirstPage extends Component<{}> {
               <Animated.View style={[{opacity: this.state.startValue}]}>
                 <Image
                   style={styles.tinyLogo}
-                  source={require('./games/lamp.jpg')}
+                  source={require('./games/lamp.png')}
                 />
               </Animated.View>
             </View>
@@ -264,7 +263,7 @@ export default class FirstPage extends Component<{}> {
               <Animated.View style={[{opacity: this.state.startValue}]}>
                 <Image
                   style={styles.tinyLogo}
-                  source={require('./games/lamp.jpg')}
+                  source={require('./games/lamp.png')}
                 />
               </Animated.View>
             </View>
@@ -383,7 +382,7 @@ const styles = StyleSheet.create({
   tinyKnot: {
     width: 250,
     height: 150,
-    marginBottom: 85,
+
   },
   animatedView: {
     width,
@@ -412,7 +411,13 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
     textAlign: 'center',
     fontFamily: 'Courgette.Regular',
-    color: '#ffffff',
+    color: '#FF4500',
+    bottom: 10,
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 
