@@ -18,29 +18,7 @@ import ConfettiCannon from 'react-native-confetti-cannon';
 import {Picker, Icon} from 'native-base';
 import PropTypes from 'prop-types';
 import {FloatingAction} from 'react-native-floating-action';
-import Printer from './Printer';
-import Ticket from './Ticket';
 let {width, height} = Dimensions.get('window');
-const actions = [
-  {
-    text: 'Best Compliments',
-    icon: require('./games/info_icon.png'),
-    name: 'btn_familyInfo',
-    position: 1,
-  },
-  {
-    text: 'Timings & Venue',
-    icon: require('./games/location_icon.png'),
-    name: 'btn_location',
-    position: 3,
-  },
-  // {
-  //   text: "Video",
-  //   icon: require("./images/location.png"),
-  //   name: "bt_videocam",
-  //   position: 4,
-  // },
-];
 
 class TypingText extends Component<{}> {
   constructor() {
@@ -117,7 +95,7 @@ class TypingText extends Component<{}> {
             textAlign: 'center',
             marginTop: this.props.marginTop,
             marginHorizontal: this.props.marginHorizontal,
-            fontFamily: this.props.fontFamily,
+            // fontFamily: this.props.fontFamily,
           }}>
           {this.state.text}
 
@@ -139,9 +117,6 @@ export default class FirstPage extends Component<{}> {
       endValue: 1,
       duration: 10000,
       backClickCount: 0,
-
-      // AsyncStorage.setItem('languageSelected', 'en');
-      // languageSelected :"en",
     };
   }
 
@@ -210,8 +185,6 @@ export default class FirstPage extends Component<{}> {
     headerTitleStyle: {
       fontSize: 18,
     },
-    // title: 'Second Page',
-    //Sets Header text of Status Bar
   };
 
   render() {
@@ -221,10 +194,6 @@ export default class FirstPage extends Component<{}> {
     let Splash_Screen = (
       <View style={styles.SplashScreen_RootView}>
         <View style={styles.SplashScreen_ChildView}>
-          {/* <Image
-            source={require("./images/veerabhadra10.jpg")}
-            style={{ width: "100%", height: "100%", resizeMode: "contain" }}
-          /> */}
           <ImageBackground
             source={require('./games/splash_new.jpg')}
             style={styles.image}>
@@ -284,7 +253,7 @@ export default class FirstPage extends Component<{}> {
               fontSize: 15,
               color: '#FFDF00',
               alignContent: 'center',
-              fontFamily: 'BalooTamma2-Regular',
+              // fontFamily: 'BalooTamma2-Regular',
               fontWeight: 'bold',
             }}>
             || ॐ Shri Veerabhadreshwara Prasanna ||
@@ -294,19 +263,6 @@ export default class FirstPage extends Component<{}> {
               text={'With joyful hearts We request your presence at '}
             />
           </ScrollView>
-          {/* <FloatingAction
-            actions={actions}
-            onPressItem={name => {
-              if (name === 'btn_location') {
-                navigate('SecondPage');
-                this.explosion && this.explosion.start();
-              } else if (name === 'btn_familyInfo') {
-                navigate('FamilyInfo');
-              } else if (name === 'btn_muhurtha') {
-              }
-              console.log(`selected button: ${name}`);
-            }}
-          /> */}
           {this.state.isVisible === true ? Splash_Screen : null}
         </ImageBackground>
         <Animated.View
@@ -347,22 +303,6 @@ const styles = StyleSheet.create({
     height: '100%',
   },
 
-  fontFamilyDeepak: {
-    fontFamily: 'Courgette.Regular',
-    color: '#ffffff',
-    fontSize: 15,
-    fontWeight: 'bold',
-    marginLeft: 25,
-  },
-
-  fontFamilySumalatha: {
-    fontFamily: 'Courgette.Regular',
-    color: '#ffffff',
-    fontSize: 15,
-    fontWeight: 'bold',
-    marginLeft: 15,
-  },
-
   SplashScreen_ChildView: {
     justifyContent: 'center',
     alignItems: 'center',
@@ -379,11 +319,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
   },
-  tinyKnot: {
-    width: 250,
-    height: 150,
-
-  },
+  
   animatedView: {
     width,
     backgroundColor: '#0a5386',
@@ -410,7 +346,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontStyle: 'italic',
     textAlign: 'center',
-    fontFamily: 'Courgette.Regular',
     color: '#FF4500',
     bottom: 10,
     position: 'absolute',
@@ -427,7 +362,7 @@ TypingText.propTypes = {
   marginTop: PropTypes.number,
   marginHorizontal: PropTypes.number,
   textSize: PropTypes.number,
-  fontFamily: PropTypes.fontFamily,
+  // fontFamily: PropTypes.fontFamily,
   typingAnimationDuration: PropTypes.number,
   blinkingCursorAnimationDuration: PropTypes.number,
 };
@@ -437,7 +372,7 @@ TypingText.defaultProps = {
   marginTop: 100,
   marginHorizontal: 30,
   textSize: 22,
-  fontFamily: 'Courgette.Regular',
+  // fontFamily: 'Courgette.Regular',
   typingAnimationDuration: 50,
   blinkingCursorAnimationDuration: 650,
 };
