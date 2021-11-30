@@ -195,11 +195,16 @@ export default class FirstPage extends Component<{}> {
       <View style={styles.SplashScreen_RootView}>
         <View style={styles.SplashScreen_ChildView}>
           <ImageBackground
-            source={require('./games/swamy_splash.jpg')}
+            source={require('./games/splash_new.jpg')}
             style={styles.image}>
-            <Text style={styles.topHeadingInvite}>
-              ಶ್ರೀ ವೀರಭದ್ರ ಸ್ವಾಮಿ ಜಾತ್ರೆ{'\n'}ಬೆಟಗೇರಿ
-            </Text>
+            <View >
+              <Image
+                source={require('./games/splash_bg.png')}
+              style={styles.image}/>
+              {/* <Text style={styles.topHeadingInvite}>
+                ಶ್ರೀ ವೀರಭದ್ರ ಸ್ವಾಮಿ ಜಾತ್ರೆ{'\n'}ಬೆಟಗೇರಿ
+              </Text> */}
+            </View>
           </ImageBackground>
           <View
             style={{
@@ -311,7 +316,7 @@ const styles = StyleSheet.create({
   SplashScreen_ChildView: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#bb1471',
+    backgroundColor: '#FFD700',
     flex: 1,
     padding: 5,
   },
@@ -354,7 +359,7 @@ const styles = StyleSheet.create({
     color: '#FF4500',
     bottom: 1,
     position: 'absolute',
-    backgroundColor: '#bb1471',
+    backgroundColor: '#80FFFFFF.',
     left: 0,
     right: 0,
     justifyContent: 'center',
