@@ -197,7 +197,9 @@ export default class FirstPage extends Component<{}> {
           <ImageBackground
             source={require('./games/swamy_splash.jpg')}
             style={styles.image}>
-            <Text style={styles.topHeadingInvite}>ಶ್ರೀ ವೀರಭದ್ರ ಸ್ವಾಮಿ ಜಾತ್ರೆ{"\n"}ಬೆಟಗೇರಿ</Text>
+            <Text style={styles.topHeadingInvite}>
+              ಶ್ರೀ ವೀರಭದ್ರ ಸ್ವಾಮಿ ಜಾತ್ರೆ{'\n'}ಬೆಟಗೇರಿ
+            </Text>
           </ImageBackground>
           <View
             style={{
@@ -206,6 +208,9 @@ export default class FirstPage extends Component<{}> {
               flexDirection: 'row',
               position: 'absolute',
               alignItems: 'flex-start',
+              left: 0,
+              right: 0,
+              top: 1,
             }}>
             <View
               style={{
@@ -347,7 +352,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     color: '#FF4500',
-    bottom:1,
+    bottom: 1,
     position: 'absolute',
     backgroundColor: '#bb1471',
     left: 0,
