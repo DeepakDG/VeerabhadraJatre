@@ -197,10 +197,11 @@ export default class FirstPage extends Component<{}> {
           <ImageBackground
             source={require('./games/splash_new.jpg')}
             style={styles.image}>
-            <View >
+            <View>
               <Image
                 source={require('./games/splash_bg.png')}
-              style={styles.image}/>
+                style={styles.image}
+              />
               {/* <Text style={styles.topHeadingInvite}>
                 ಶ್ರೀ ವೀರಭದ್ರ ಸ್ವಾಮಿ ಜಾತ್ರೆ{'\n'}ಬೆಟಗೇರಿ
               </Text> */}
@@ -242,7 +243,7 @@ export default class FirstPage extends Component<{}> {
               <Animated.View style={[{opacity: this.state.startValue}]}>
                 <Image
                   style={styles.tinyLogo}
-                  source={require('./games/lamp.png')}
+                  source={require('./games/lamp1.png')}
                 />
               </Animated.View>
             </View>
@@ -254,23 +255,23 @@ export default class FirstPage extends Component<{}> {
     return (
       <View style={styles.MainContainer}>
         <ImageBackground
-          source={require('./games/bg.jpg')}
-          style={{width: '100%', height: '100%'}}>
+          source={require('./games/bg_screen2.jpg')}
+          style={{width: null, height: null, flex: 1, resizeMode: 'cover'}}>
           <Text
             style={{
               textAlign: 'center',
               marginTop: 5,
               fontSize: 15,
-              color: '#FFDF00',
+              color: '#e75480',
               alignContent: 'center',
               // fontFamily: 'BalooTamma2-Regular',
               fontWeight: 'bold',
             }}>
-            || ॐ Shri Veerabhadreshwara Prasanna ||
+            || ॐ ಗದಗ- ಬೆಟಗೇರಿಯ ಶ್ರೀ ವೀರಭದ್ರದೇವರ "ಮಹಾರಥೋತ್ಸವದ" ಆಮಂತ್ರಣ ಪತ್ರಿಕೆ ||
           </Text>
           <ScrollView>
             <TypingText
-              text={'With joyful hearts We request your presence at '}
+              text={'ಇದೇ ಶಕೆ 1943 ನೇ ಪ್ಲವ ನಾಮ ಸಂವತ್ಸರ ಮಾರ್ಗಶಿರ ಶುದ್ಧ ಪೂರ್ಣಿಮ, ಹೊಸ್ತಿಲ ಹುಣ್ಣಿಮೆ ತಾ// 19-12-2021 ನೆ ರವಿವಾರ ಬೆಳಗ್ಗೆ "ರುದ್ರಾಭಿಷೇಕ" ನಂತರ ಸಾಯಂಕಾಲ 5:00 ಗಂಟೆಗೆ ಮಹಾ ರಥೋತ್ಸವವು ಹಾಗೂ ಮಾರ್ಗಶಿರ ಬ.15 ತಾ//20-12-2021 ನೇ ಸೋಮವಾರ ಮುಂಜಾನೆ "ಅಗ್ನಿ ಹಾಯುವುದು" ನಂತರ ಸಾಯಂಕಾಲ 6:00 ಗಂಟೆಗೆ "ಕಡುಬಿನ ಕಾಳಗ"ನೆರವೇರುತ್ತದೆ,ತಾ//21-12-2021 ನೇ ಮಂಗಳವಾರ ಮಧ್ಯಾಹ್ನ "ಮಹಾ ಪ್ರಸಾದ"ಜರುಗುವುದು.ಕಾರಣ ಯಾವತ್ತೂ ಭಕ್ತರು ಈ ಎಲ್ಲಾ ಕಾರ್ಯಕ್ರಮಗಳಿಗೆ ಆಗಮಿಸಿ.ಶ್ರೀ ವೀರಭದ್ರೇಶ್ವರರ ಕೃಪೆಗೆ ಪಾತ್ರರಾಗಬೇಕಾಗಿ ಬಿನ್ನಹ.ತಮ್ಮ ಶ್ರೀ ವೀರಭದ್ರೇಶ್ವರ ಸದ್ಬಕ್ತ ಮಂಡಳಿ, ಬೆಟಗೇರಿ.'}
             />
           </ScrollView>
           {this.state.isVisible === true ? Splash_Screen : null}
@@ -318,7 +319,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#FFD700',
     flex: 1,
-    padding: 5,
+    padding: 10,
   },
   image: {
     width: '100%',
@@ -379,7 +380,7 @@ TypingText.propTypes = {
 };
 
 TypingText.defaultProps = {
-  color: 'rgb(255,223,0)',
+  color: '#e75480',
   marginTop: 100,
   marginHorizontal: 30,
   textSize: 22,
