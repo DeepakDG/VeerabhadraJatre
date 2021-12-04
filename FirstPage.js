@@ -14,6 +14,7 @@ import {
   Animated,
   TouchableOpacity,
 } from 'react-native';
+import GlobalFont from 'react-native-global-font';
 import ConfettiCannon from 'react-native-confetti-cannon';
 import {Picker, Icon} from 'native-base';
 import PropTypes from 'prop-types';
@@ -36,7 +37,15 @@ class TypingText extends Component<{}> {
   componentDidMount() {
     this.typingAnimation();
     this.blinkingCursorAnimation();
+    let fontName = 'BalooTamma2-Regular';
+    GlobalFont.applyGlobal(fontName);
   }
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     Alert.alert('I am appearing...', 'After 5 seconds!');
+  //   }, 5000);
+  // }, []);
 
   componentWillUnmout() {
     clearTimeout(this.typing_timer);
@@ -95,7 +104,8 @@ class TypingText extends Component<{}> {
             textAlign: 'center',
             marginTop: this.props.marginTop,
             marginHorizontal: this.props.marginHorizontal,
-            // fontFamily: this.props.fontFamily,
+            fontFamily: this.props.fontFamily,
+            paddingBottom: this.props.paddingBottom,
           }}>
           {this.state.text}
 
@@ -202,11 +212,20 @@ export default class FirstPage extends Component<{}> {
                 source={require('./games/splash_bg.png')}
                 style={styles.image}
               />
-              {/* <Text style={styles.topHeadingInvite}>
-                ಶ್ರೀ ವೀರಭದ್ರ ಸ್ವಾಮಿ ಜಾತ್ರೆ{'\n'}ಬೆಟಗೇರಿ
-              </Text> */}
+              <Animated.View style={[{opacity: this.state.startValue}]}>
+                <View style={styles.bottombanner}>
+                  <ImageBackground
+                    style={styles.theImage}
+                    source={require('./games/banner_splash.jpg')}>
+                    <Text style={styles.topHeadingInvite}>
+                      || ಶ್ರೀ ವೀರಭದ್ರದೇವರ "ಮಹಾರಥೋತ್ಸವದ" ಆಮಂತ್ರಣ ಪತ್ರಿಕೆ ||
+                    </Text>
+                  </ImageBackground>
+                </View>
+              </Animated.View>
             </View>
           </ImageBackground>
+
           <View
             style={{
               width: '100%',
@@ -255,23 +274,26 @@ export default class FirstPage extends Component<{}> {
     return (
       <View style={styles.MainContainer}>
         <ImageBackground
-          source={require('./games/bg_screen2.jpg')}
+          source={require('./games/home_bg.jpg')}
           style={{width: null, height: null, flex: 1, resizeMode: 'cover'}}>
           <Text
             style={{
               textAlign: 'center',
-              marginTop: 5,
-              fontSize: 15,
+              marginTop: 28,
+              fontSize: 18,
               color: '#e75480',
               alignContent: 'center',
-              // fontFamily: 'BalooTamma2-Regular',
+              fontFamily: 'BalooTamma2-Regular',
               fontWeight: 'bold',
             }}>
-            || ॐ ಗದಗ- ಬೆಟಗೇರಿಯ ಶ್ರೀ ವೀರಭದ್ರದೇವರ "ಮಹಾರಥೋತ್ಸವದ" ಆಮಂತ್ರಣ ಪತ್ರಿಕೆ ||
+            || ಶ್ರೀ ವೀರಭದ್ರೇಶ್ವರ ಪ್ರಸನ್ನ ||
           </Text>
+
           <ScrollView>
             <TypingText
-              text={'ಇದೇ ಶಕೆ 1943 ನೇ ಪ್ಲವ ನಾಮ ಸಂವತ್ಸರ ಮಾರ್ಗಶಿರ ಶುದ್ಧ ಪೂರ್ಣಿಮ, ಹೊಸ್ತಿಲ ಹುಣ್ಣಿಮೆ ತಾ// 19-12-2021 ನೆ ರವಿವಾರ ಬೆಳಗ್ಗೆ "ರುದ್ರಾಭಿಷೇಕ" ನಂತರ ಸಾಯಂಕಾಲ 5:00 ಗಂಟೆಗೆ ಮಹಾ ರಥೋತ್ಸವವು ಹಾಗೂ ಮಾರ್ಗಶಿರ ಬ.15 ತಾ//20-12-2021 ನೇ ಸೋಮವಾರ ಮುಂಜಾನೆ "ಅಗ್ನಿ ಹಾಯುವುದು" ನಂತರ ಸಾಯಂಕಾಲ 6:00 ಗಂಟೆಗೆ "ಕಡುಬಿನ ಕಾಳಗ"ನೆರವೇರುತ್ತದೆ,ತಾ//21-12-2021 ನೇ ಮಂಗಳವಾರ ಮಧ್ಯಾಹ್ನ "ಮಹಾ ಪ್ರಸಾದ"ಜರುಗುವುದು.ಕಾರಣ ಯಾವತ್ತೂ ಭಕ್ತರು ಈ ಎಲ್ಲಾ ಕಾರ್ಯಕ್ರಮಗಳಿಗೆ ಆಗಮಿಸಿ.ಶ್ರೀ ವೀರಭದ್ರೇಶ್ವರರ ಕೃಪೆಗೆ ಪಾತ್ರರಾಗಬೇಕಾಗಿ ಬಿನ್ನಹ.ತಮ್ಮ ಶ್ರೀ ವೀರಭದ್ರೇಶ್ವರ ಸದ್ಬಕ್ತ ಮಂಡಳಿ, ಬೆಟಗೇರಿ.'}
+              text={
+                'ಇದೇ ಶಕೆ 1943 ನೇ ಪ್ಲವ ನಾಮ ಸಂವತ್ಸರ ಮಾರ್ಗಶಿರ ಶುದ್ಧ ಪೂರ್ಣಿಮ, ಹೊಸ್ತಿಲ ಹುಣ್ಣಿಮೆ ತಾ// 19-12-2021 ನೆ ರವಿವಾರ ಬೆಳಗ್ಗೆ "ರುದ್ರಾಭಿಷೇಕ" ನಂತರ ಸಾಯಂಕಾಲ 5:00 ಗಂಟೆಗೆ "ಮಹಾ ರಥೋತ್ಸವವು" ಹಾಗೂ ಮಾರ್ಗಶಿರ ಬ.15 ತಾ//20-12-2021 ನೇ ಸೋಮವಾರ ಮುಂಜಾನೆ "ಅಗ್ನಿ ಹಾಯುವುದು" ನಂತರ ಸಾಯಂಕಾಲ 6:00 ಗಂಟೆಗೆ "ಕಡುಬಿನ ಕಾಳಗ"ನೆರವೇರುತ್ತದೆ,ತಾ//21-12-2021 ನೇ ಮಂಗಳವಾರ ಮಧ್ಯಾಹ್ನ "ಮಹಾ ಪ್ರಸಾದ"ಜರುಗುವುದು.ಕಾರಣ ಯಾವತ್ತೂ ಭಕ್ತರು ಈ ಎಲ್ಲಾ ಕಾರ್ಯಕ್ರಮಗಳಿಗೆ ಆಗಮಿಸಿ.ಶ್ರೀ ವೀರಭದ್ರೇಶ್ವರರ ಕೃಪೆಗೆ ಪಾತ್ರರಾಗಬೇಕಾಗಿ ಬಿನ್ನಹ.ತಮ್ಮ ಶ್ರೀ ವೀರಭದ್ರೇಶ್ವರ ಸದ್ಬಕ್ತ ಮಂಡಳಿ, ಬೆಟಗೇರಿ.'
+              }
             />
           </ScrollView>
           {this.state.isVisible === true ? Splash_Screen : null}
@@ -319,7 +341,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#FFD700',
     flex: 1,
-    padding: 10,
+    padding: 5,
   },
   image: {
     width: '100%',
@@ -331,7 +353,14 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
   },
-
+  bottombanner: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 80,
+    width: '100%',
+    position: 'absolute',
+    bottom: 1,
+  },
   animatedView: {
     width,
     backgroundColor: '#0a5386',
@@ -353,16 +382,19 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 3,
   },
+  theImage: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover',
+    textAlign: 'center',
+  },
   topHeadingInvite: {
-    fontSize: 25,
+    fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center',
+    marginTop: 10,
     color: '#FF4500',
-    bottom: 1,
-    position: 'absolute',
-    backgroundColor: '#80FFFFFF.',
-    left: 0,
-    right: 0,
+    fontFamily: 'BalooTamma2-Regular',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -374,17 +406,19 @@ TypingText.propTypes = {
   marginTop: PropTypes.number,
   marginHorizontal: PropTypes.number,
   textSize: PropTypes.number,
-  // fontFamily: PropTypes.fontFamily,
+  fontFamily: PropTypes.fontFamily,
   typingAnimationDuration: PropTypes.number,
   blinkingCursorAnimationDuration: PropTypes.number,
+  paddingBottom:PropTypes.number,
 };
 
 TypingText.defaultProps = {
   color: '#e75480',
-  marginTop: 100,
-  marginHorizontal: 30,
+  marginTop: 45,
+  marginHorizontal: 28,
   textSize: 22,
-  // fontFamily: 'Courgette.Regular',
+  fontFamily: 'BalooTamma2-Regular',
   typingAnimationDuration: 50,
   blinkingCursorAnimationDuration: 650,
+  paddingBottom: 50,
 };
