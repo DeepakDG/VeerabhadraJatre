@@ -41,13 +41,10 @@ class TypingText extends Component<{}> {
     GlobalFont.applyGlobal(fontName);
   }
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     Alert.alert('I am appearing...', 'After 5 seconds!');
-  //   }, 5000);
-  // }, []);
-
   componentWillUnmout() {
+    this.setState = (state,callback)=>{
+        return;
+    };
     clearTimeout(this.typing_timer);
 
     this.typing_timer = -1;
@@ -104,7 +101,7 @@ class TypingText extends Component<{}> {
             textAlign: 'center',
             marginTop: this.props.marginTop,
             marginHorizontal: this.props.marginHorizontal,
-            fontFamily: this.props.fontFamily,
+            fontFamily: 'BalooTamma2-Regular',
             paddingBottom: this.props.paddingBottom,
           }}>
           {this.state.text}
@@ -198,7 +195,6 @@ export default class FirstPage extends Component<{}> {
   };
 
   render() {
-    const ticketHeight = 280;
     const {navigate} = this.props.navigation;
 
     let Splash_Screen = (
@@ -218,7 +214,8 @@ export default class FirstPage extends Component<{}> {
                     style={styles.theImage}
                     source={require('./games/banner_splash.jpg')}>
                     <Text style={styles.topHeadingInvite}>
-                      || ಶ್ರೀ ವೀರಭದ್ರದೇವರ "ಮಹಾರಥೋತ್ಸವದ" ಆಮಂತ್ರಣ ಪತ್ರಿಕೆ ||
+                      ಶ್ರೀ ವೀರಭದ್ರದೇವರ "ಮಹಾರಥೋತ್ಸವದ" ಆಮಂತ್ರಣ ಪತ್ರಿಕೆ{'\n'}ಗದಗ -
+                      ಬೆಟಗೇರಿ
                     </Text>
                   </ImageBackground>
                 </View>
@@ -356,7 +353,7 @@ const styles = StyleSheet.create({
   bottombanner: {
     alignItems: 'center',
     justifyContent: 'center',
-    height: 80,
+    height: 75,
     width: '100%',
     position: 'absolute',
     bottom: 1,
@@ -392,7 +389,9 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginTop: 10,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingTop: 8,
     color: '#FF4500',
     fontFamily: 'BalooTamma2-Regular',
     justifyContent: 'center',
@@ -406,10 +405,10 @@ TypingText.propTypes = {
   marginTop: PropTypes.number,
   marginHorizontal: PropTypes.number,
   textSize: PropTypes.number,
-  fontFamily: PropTypes.fontFamily,
+  // fontFamily: PropTypes.,
   typingAnimationDuration: PropTypes.number,
   blinkingCursorAnimationDuration: PropTypes.number,
-  paddingBottom:PropTypes.number,
+  paddingBottom: PropTypes.number,
 };
 
 TypingText.defaultProps = {
@@ -417,7 +416,6 @@ TypingText.defaultProps = {
   marginTop: 45,
   marginHorizontal: 28,
   textSize: 22,
-  fontFamily: 'BalooTamma2-Regular',
   typingAnimationDuration: 50,
   blinkingCursorAnimationDuration: 650,
   paddingBottom: 50,
