@@ -214,8 +214,7 @@ export default class FirstPage extends Component<{}> {
                     style={styles.theImage}
                     source={require('./games/banner_splash.jpg')}>
                     <Text style={styles.topHeadingInvite}>
-                      ಶ್ರೀ ವೀರಭದ್ರದೇವರ "ಮಹಾರಥೋತ್ಸವದ" ಆಮಂತ್ರಣ ಪತ್ರಿಕೆ{'\n'}ಗದಗ -
-                      ಬೆಟಗೇರಿ
+                      ಶ್ರೀ ವೀರಭದ್ರದೇವರ "ಮಹಾರಥೋತ್ಸವದ" ಆಮಂತ್ರಣ ಪತ್ರಿಕೆ,ಗದಗ-ಬೆಟಗೇರಿ
                     </Text>
                   </ImageBackground>
                 </View>
@@ -276,7 +275,7 @@ export default class FirstPage extends Component<{}> {
           <Text
             style={{
               textAlign: 'center',
-              marginTop: 28,
+              marginTop: 32,
               fontSize: 18,
               color: '#e75480',
               alignContent: 'center',
@@ -291,7 +290,12 @@ export default class FirstPage extends Component<{}> {
               text={
                 'ಇದೇ ಶಕೆ 1943 ನೇ ಪ್ಲವ ನಾಮ ಸಂವತ್ಸರ ಮಾರ್ಗಶಿರ ಶುದ್ಧ ಪೂರ್ಣಿಮ, ಹೊಸ್ತಿಲ ಹುಣ್ಣಿಮೆ ತಾ// 19-12-2021 ನೆ ರವಿವಾರ ಬೆಳಗ್ಗೆ "ರುದ್ರಾಭಿಷೇಕ" ನಂತರ ಸಾಯಂಕಾಲ 5:00 ಗಂಟೆಗೆ "ಮಹಾ ರಥೋತ್ಸವವು" ಹಾಗೂ ಮಾರ್ಗಶಿರ ಬ.15 ತಾ//20-12-2021 ನೇ ಸೋಮವಾರ ಮುಂಜಾನೆ "ಅಗ್ನಿ ಹಾಯುವುದು" ನಂತರ ಸಾಯಂಕಾಲ 6:00 ಗಂಟೆಗೆ "ಕಡುಬಿನ ಕಾಳಗ"ನೆರವೇರುತ್ತದೆ,ತಾ//21-12-2021 ನೇ ಮಂಗಳವಾರ ಮಧ್ಯಾಹ್ನ "ಮಹಾ ಪ್ರಸಾದ"ಜರುಗುವುದು.ಕಾರಣ ಯಾವತ್ತೂ ಭಕ್ತರು ಈ ಎಲ್ಲಾ ಕಾರ್ಯಕ್ರಮಗಳಿಗೆ ಆಗಮಿಸಿ.ಶ್ರೀ ವೀರಭದ್ರೇಶ್ವರರ ಕೃಪೆಗೆ ಪಾತ್ರರಾಗಬೇಕಾಗಿ ಬಿನ್ನಹ.ತಮ್ಮ ಶ್ರೀ ವೀರಭದ್ರೇಶ್ವರ ಸದ್ಬಕ್ತ ಮಂಡಳಿ, ಬೆಟಗೇರಿ.'
               }
+              
             />
+             {/* <TypingText
+              text={
+                'ತಮ್ಮ ಶ್ರೀ ವೀರಭದ್ರೇಶ್ವರ ಸದ್ಬಕ್ತ ಮಂಡಳಿ, ಬೆಟಗೇರಿ.'
+              }/> */}
           </ScrollView>
           {this.state.isVisible === true ? Splash_Screen : null}
         </ImageBackground>
@@ -301,13 +305,13 @@ export default class FirstPage extends Component<{}> {
             {transform: [{translateY: this.springValue}]},
           ]}>
           <Text style={styles.exitTitleText}>
-            press back again to exit the app
+            ಅಪ್ಲಿಕೇಶನ್‌ನಿಂದ ನಿರ್ಗಮಿಸಲು ಸರಿ ಒತ್ತಿರಿ
           </Text>
 
           <TouchableOpacity
             activeOpacity={0.9}
             onPress={() => BackHandler.exitApp()}>
-            <Text style={styles.exitText}>Exit</Text>
+            <Text style={styles.exitText}>ಸರಿ</Text>
           </TouchableOpacity>
         </Animated.View>
       </View>
@@ -413,7 +417,7 @@ TypingText.propTypes = {
 
 TypingText.defaultProps = {
   color: '#e75480',
-  marginTop: 45,
+  marginTop: 30,
   marginHorizontal: 28,
   textSize: 22,
   typingAnimationDuration: 50,
