@@ -42,8 +42,8 @@ class TypingText extends Component<{}> {
   }
 
   componentWillUnmout() {
-    this.setState = (state,callback)=>{
-        return;
+    this.setState = (state, callback) => {
+      return;
     };
     clearTimeout(this.typing_timer);
 
@@ -201,7 +201,7 @@ export default class FirstPage extends Component<{}> {
       <View style={styles.SplashScreen_RootView}>
         <View style={styles.SplashScreen_ChildView}>
           <ImageBackground
-            source={require('./games/splash_new.jpg')}
+            source={require('./games/splash_background.png')}
             style={styles.image}>
             <View>
               <Image
@@ -212,7 +212,7 @@ export default class FirstPage extends Component<{}> {
                 <View style={styles.bottombanner}>
                   <ImageBackground
                     style={styles.theImage}
-                    source={require('./games/banner_splash.jpg')}>
+                    source={require('./games/poster_bg.jpg')}>
                     <Text style={styles.topHeadingInvite}>
                       ಶ್ರೀ ವೀರಭದ್ರದೇವರ "ಮಹಾರಥೋತ್ಸವದ" ಆಮಂತ್ರಣ ಪತ್ರಿಕೆ,ಗದಗ-ಬೆಟಗೇರಿ
                     </Text>
@@ -270,14 +270,14 @@ export default class FirstPage extends Component<{}> {
     return (
       <View style={styles.MainContainer}>
         <ImageBackground
-          source={require('./games/home_bg.jpg')}
+          source={require('./games/background_home.jpg')}
           style={{width: null, height: null, flex: 1, resizeMode: 'cover'}}>
           <Text
             style={{
               textAlign: 'center',
               marginTop: 32,
               fontSize: 18,
-              color: '#e75480',
+              color: '#7D0541',
               alignContent: 'center',
               fontFamily: 'BalooTamma2-Regular',
               fontWeight: 'bold',
@@ -288,11 +288,10 @@ export default class FirstPage extends Component<{}> {
           <ScrollView>
             <TypingText
               text={
-                'ಇದೇ ಶಕೆ 1943 ನೇ ಪ್ಲವ ನಾಮ ಸಂವತ್ಸರ ಮಾರ್ಗಶಿರ ಶುದ್ಧ ಪೂರ್ಣಿಮ, ಹೊಸ್ತಿಲ ಹುಣ್ಣಿಮೆ ತಾ// 19-12-2021 ನೆ ರವಿವಾರ ಬೆಳಗ್ಗೆ "ರುದ್ರಾಭಿಷೇಕ" ನಂತರ ಸಾಯಂಕಾಲ 5:00 ಗಂಟೆಗೆ "ಮಹಾ ರಥೋತ್ಸವವು" ಹಾಗೂ ಮಾರ್ಗಶಿರ ಬ.15 ತಾ//20-12-2021 ನೇ ಸೋಮವಾರ ಮುಂಜಾನೆ "ಅಗ್ನಿ ಹಾಯುವುದು" ನಂತರ ಸಾಯಂಕಾಲ 6:00 ಗಂಟೆಗೆ "ಕಡುಬಿನ ಕಾಳಗ"ನೆರವೇರುತ್ತದೆ,ತಾ//21-12-2021 ನೇ ಮಂಗಳವಾರ ಮಧ್ಯಾಹ್ನ "ಮಹಾ ಪ್ರಸಾದ"ಜರುಗುವುದು.ಕಾರಣ ಯಾವತ್ತೂ ಭಕ್ತರು ಈ ಎಲ್ಲಾ ಕಾರ್ಯಕ್ರಮಗಳಿಗೆ ಆಗಮಿಸಿ.ಶ್ರೀ ವೀರಭದ್ರೇಶ್ವರರ ಕೃಪೆಗೆ ಪಾತ್ರರಾಗಬೇಕಾಗಿ ಬಿನ್ನಹ.ತಮ್ಮ ಶ್ರೀ ವೀರಭದ್ರೇಶ್ವರ ಸದ್ಬಕ್ತ ಮಂಡಳಿ, ಬೆಟಗೇರಿ.'
+                'ಇದೇ ಶಕೆ 1943 ನೇ ಪ್ಲವ ನಾಮ ಸಂವತ್ಸರ ಮಾರ್ಗಶಿರ ಶುದ್ಧ ಪೂರ್ಣಿಮ, ಹೊಸ್ತಿಲ ಹುಣ್ಣಿಮೆ ತಾ// 19-12-2021 ನೆ ರವಿವಾರ ಬೆಳಗ್ಗೆ "ರುದ್ರಾಭಿಷೇಕ" ನಂತರ ಸಾಯಂಕಾಲ 5:00 ಗಂಟೆಗೆ\n"ಮಹಾ ರಥೋತ್ಸವವು"\nಹಾಗೂ ಮಾರ್ಗಶಿರ ಬ.15 ತಾ//20-12-2021 ನೇ ಸೋಮವಾರ ಮುಂಜಾನೆ\n"ಅಗ್ನಿ ಹಾಯುವುದು"\nನಂತರ ಸಾಯಂಕಾಲ 6:00 ಗಂಟೆಗೆ "ಕಡುಬಿನ ಕಾಳಗ" ನೆರವೇರುತ್ತದೆ,ತಾ//21-12-2021 ನೇ ಮಂಗಳವಾರ ಮಧ್ಯಾಹ್ನ "ಮಹಾ ಪ್ರಸಾದ" ಜರುಗುವುದು.ಕಾರಣ ಯಾವತ್ತೂ ಭಕ್ತರು ಈ ಎಲ್ಲಾ ಕಾರ್ಯಕ್ರಮಗಳಿಗೆ ಆಗಮಿಸಿ.ಶ್ರೀ ವೀರಭದ್ರೇಶ್ವರರ ಕೃಪೆಗೆ ಪಾತ್ರರಾಗಬೇಕಾಗಿ ಬಿನ್ನಹ.\nತಮ್ಮ ಶ್ರೀ ವೀರಭದ್ರೇಶ್ವರ ಸದ್ಬಕ್ತ ಮಂಡಳಿ, ಬೆಟಗೇರಿ.'
               }
-              
             />
-             {/* <TypingText
+            {/* <TypingText
               text={
                 'ತಮ್ಮ ಶ್ರೀ ವೀರಭದ್ರೇಶ್ವರ ಸದ್ಬಕ್ತ ಮಂಡಳಿ, ಬೆಟಗೇರಿ.'
               }/> */}
@@ -396,7 +395,7 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     paddingRight: 10,
     paddingTop: 8,
-    color: '#FF4500',
+    color: '#FFD700',
     fontFamily: 'BalooTamma2-Regular',
     justifyContent: 'center',
     alignItems: 'center',
@@ -416,10 +415,10 @@ TypingText.propTypes = {
 };
 
 TypingText.defaultProps = {
-  color: '#e75480',
-  marginTop: 30,
+  color: '#7D0541',
+  marginTop: 25,
   marginHorizontal: 28,
-  textSize: 22,
+  textSize: 20,
   typingAnimationDuration: 50,
   blinkingCursorAnimationDuration: 650,
   paddingBottom: 50,
