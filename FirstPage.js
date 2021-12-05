@@ -212,9 +212,9 @@ export default class FirstPage extends Component<{}> {
                 <View style={styles.bottombanner}>
                   <ImageBackground
                     style={styles.theImage}
-                    source={require('./games/poster_bg.jpg')}>
+                    source={require('./games/poster_bg_new.jpg')}>
                     <Text style={styles.topHeadingInvite}>
-                      ಶ್ರೀ ವೀರಭದ್ರದೇವರ "ಮಹಾರಥೋತ್ಸವದ" ಆಮಂತ್ರಣ ಪತ್ರಿಕೆ,ಗದಗ-ಬೆಟಗೇರಿ
+                      ಶ್ರೀ ವೀರಭದ್ರದೇವರ "ಮಹಾರಥೋತ್ಸವದ" ಆಮಂತ್ರಣ ಪತ್ರಿಕೆ, ಗದಗ-ಬೆಟಗೇರಿ
                     </Text>
                   </ImageBackground>
                 </View>
